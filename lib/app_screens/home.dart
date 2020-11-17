@@ -62,7 +62,8 @@ class Home extends StatelessWidget {
                     )
                   ],
                 ),
-                JustImageToShow()
+                JustImageToShow(),
+                FlightBookButton()
 
               ],
             )));
@@ -72,10 +73,24 @@ class Home extends StatelessWidget {
 class JustImageToShow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = AssetImage('images/calender-asset');
+    AssetImage assetImage = AssetImage('images/calender-asset.png');
     Image image = Image(image: assetImage, width: 200.0, height: 200.0,);
-
     return Container(child: image,);
   }
 }
+
+class FlightBookButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+
+      child: RaisedButton(
+        color: Colors.deepOrange,
+        child: Text("Book a flight"),
+        elevation: 6.0,
+        onPressed: null,),
+    );
+  }
+}
+
 

@@ -61,11 +61,21 @@ class Home extends StatelessWidget {
                       ),
                     )
                   ],
-                )
-
-
+                ),
+                JustImageToShow()
 
               ],
             )));
   }
 }
+
+class JustImageToShow extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = AssetImage('images/calender-asset');
+    Image image = Image(image: assetImage, width: 200.0, height: 200.0,);
+
+    return Container(child: image,);
+  }
+}
+

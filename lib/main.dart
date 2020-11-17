@@ -21,25 +21,13 @@ class myFlutterApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-              "Your lucky number is ${generateLuckyNumber()}"
+              "Getting a lucky number"
           ),
         ),
        body: myFlutterAppAll(),
       ),
     );
   }
-
-
-  int generateLuckyNumber () {
-
-    var randomNumber = Random();
-
-    var luckyNumber = randomNumber.nextInt(10);
-
-    print(luckyNumber);
-
-  }
-
 
 }
 

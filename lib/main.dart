@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app_screens/first_screens.dart';
 
@@ -19,12 +21,23 @@ class myFlutterApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-              "This is a great place to learn"
+              "Your lucky number is ${generateLuckyNumber()}"
           ),
         ),
        body: myFlutterAppAll(),
       ),
     );
+  }
+
+
+  int generateLuckyNumber () {
+
+    var randomNumber = Random();
+
+    var luckyNumber = randomNumber.nextInt(10);
+
+    print(luckyNumber);
+
   }
 
 

@@ -83,12 +83,39 @@ class FlightBookButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: 30.0),
+      width: 250,
+      height: 50.0,
 
       child: RaisedButton(
         color: Colors.deepOrange,
-        child: Text("Book a flight"),
+        child: Text(
+            "Book a flight",
+          textDirection: TextDirection.ltr,
+          style: TextStyle(
+            fontSize: 20.0,
+            color: Colors.white,
+            fontFamily: 'Schyler'
+          ),
+        ),
         elevation: 6.0,
-        onPressed: null,),
+        onPressed: () {
+          bookFlight(context);
+        }),
+    );
+  }
+
+  void bookFlight (BuildContext context) {
+    var alertDialog = AlertDialog(
+      title: Text("Flight Booked Successfully"),
+      content: Text("Have a pleasant flight"),
+    );
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alertDialog;
+      }
     );
   }
 }

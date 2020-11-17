@@ -10,7 +10,16 @@ class Home extends StatelessWidget {
         // width: 100.0,
         // height: 100.0,
         //margin: EdgeInsets.only(left: 15.0, top: 30.0),
-        child: Text("My flutter App", textDirection: TextDirection.ltr),
+        child: Text(
+            "My flutter App",
+            textDirection: TextDirection.ltr,
+          style: TextStyle(
+            decoration: TextDecoration.none,
+            fontSize: 40.0,
+            fontFamily: 'Schyler'
+
+          ),
+        ),
       )
     );
   }

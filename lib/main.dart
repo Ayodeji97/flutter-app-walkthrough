@@ -4,7 +4,6 @@ import './app_screens/home.dart';
 void main () {
   runApp(MaterialApp(
     title: "Exploring UI widgets",
-    color: Colors.white,
     home: Home(),
   ));
 }

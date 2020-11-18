@@ -7,7 +7,7 @@ class Home extends StatelessWidget {
         child: Container(
             alignment: Alignment.center,
             color: Colors.blue,
-            padding : EdgeInsets.only(left: 10.0, top: 40.0),
+            padding: EdgeInsets.only(left: 10.0, top: 40.0),
             // width: 100.0,
             // height: 100.0,
             //margin: EdgeInsets.only(left: 15.0, top: 30.0),
@@ -37,7 +37,6 @@ class Home extends StatelessWidget {
                     )
                   ],
                 ),
-
                 Row(
                   children: <Widget>[
                     Expanded(
@@ -64,7 +63,6 @@ class Home extends StatelessWidget {
                 ),
                 JustImageToShow(),
                 FlightBookButton()
-
               ],
             )));
   }
@@ -74,8 +72,14 @@ class JustImageToShow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AssetImage assetImage = AssetImage('images/calender-asset.png');
-    Image image = Image(image: assetImage, width: 200.0, height: 200.0,);
-    return Container(child: image,);
+    Image image = Image(
+      image: assetImage,
+      width: 200.0,
+      height: 200.0,
+    );
+    return Container(
+      child: image,
+    );
   }
 }
 
@@ -86,38 +90,26 @@ class FlightBookButton extends StatelessWidget {
       margin: EdgeInsets.only(top: 30.0),
       width: 250,
       height: 50.0,
-
       child: RaisedButton(
-        color: Colors.deepOrange,
-        child: Text(
+          color: Colors.deepOrange,
+          child: Text(
             "Book a flight",
-          textDirection: TextDirection.ltr,
-          style: TextStyle(
-            fontSize: 20.0,
-            color: Colors.white,
-            fontFamily: 'Schyler'
+            textDirection: TextDirection.ltr,
+            style: TextStyle(
+                fontSize: 20.0, color: Colors.white, fontFamily: 'Schyler'),
           ),
-        ),
-        elevation: 6.0,
-        onPressed: () {
-          bookFlight(context);
-        }),
+          elevation: 6.0,
+          onPressed: () => bookFlight(context)),
     );
   }
 
-  void bookFlight (BuildContext context) {
+  void bookFlight(BuildContext context) {
     var alertDialog = AlertDialog(
       title: Text("Flight Booked Successfully"),
       content: Text("Have a pleasant flight"),
     );
 
     showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return alertDialog;
-      }
-    );
+        context: context, builder: (BuildContext context) => alertDialog);
   }
 }
-
-
